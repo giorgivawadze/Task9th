@@ -1,7 +1,10 @@
+
 .container {
     width: 500px;
     text-align: center;
-    margin: 15rem auto;
+    margin-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container h1 {
     font-size: 1.5rem;
@@ -9,16 +12,7 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-.container input {
-    width: 15rem;
-    height: 2.2rem;
-    border-radius: 3px;
-    outline:none ;
-    border: none;
-    box-shadow: 0 0 3px 1px gray;
-    
-    
-}
+
 .container button {
     padding: 10px 20px;
     font-size: 16px;
@@ -28,6 +22,15 @@
     cursor: pointer;
     transition: .3s linear ;
 }
+.container input  {
+    width: 15rem;
+    margin-top: 10px;
+    height: 2.2rem;
+    border-radius: 3px;
+    outline:none ;
+    border: none;
+    box-shadow: 0 0 3px 1px gray;
+}
 .container button:hover {
     background-color: rgb(38, 38, 223);
 }
@@ -36,4 +39,27 @@ li {
     font-size: 25px;
     padding: 15px;
     border-bottom: 1px solid lightgray;
+}
+#spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: 10px solid gray;
+    margin: 1rem auto;
+    border-top-color: black;
+    animation: loader 2s linear infinite;
+    
+}
+.done {
+    text-decoration: line-through;
+    color: gray;
+  }
+@keyframes loader {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
